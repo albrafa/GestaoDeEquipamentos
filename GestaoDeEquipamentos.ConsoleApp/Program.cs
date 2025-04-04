@@ -16,7 +16,7 @@
             Console.WriteLine(equipamentoUm.Fabricante);
             Console.WriteLine(equipamentoUm.PrecoAquisicao);
             Console.WriteLine(equipamentoUm.DataFabricacao);
-            Console.WriteLine(equipamentoUm.ObterNumeroSerie());
+            Console.WriteLine(equipamentoUm.ObterNumeroSerie()); 
 
 
             Console.ReadLine();
