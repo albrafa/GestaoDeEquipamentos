@@ -9,6 +9,14 @@
         public DateTime DataFabricacao;
 
 
+        public Equipamento(string nome, string fabricante, decimal precoAquisicao, DateTime dataFabicacao)
+        {
+            Nome = nome;
+            Fabricante = fabricante;
+            PrecoAquisicao = precoAquisicao;
+            DataFabricacao = dataFabicacao;
+        }
+
         public string ObterNumeroSerie()
         {
             string tresPrimeirosCaracteres = Nome.Substring(0, 3).ToUpper();
