@@ -62,7 +62,7 @@
 
                         Console.WriteLine("{0, -10} | {1, -15} | {2, -15} | {3, -15} | {4, -15} | {5, -10}",
                                           "Id", "nome", "Núm. Série", "Fabricante", "Preço", "Data de fabricação");
-
+                         
                         for (int i = 0; i < equipamentos.Length; i++)
                         {
                             Equipamento eSelecionado = equipamentos[i];
