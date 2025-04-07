@@ -69,7 +69,7 @@
                             if (eSelecionado == null) continue;
 
                             Console.WriteLine("{0, -10} | {1, -15} | {2, -15} | {3, -15} | {4, -15} | {5, -10}",
-                            eSelecionado.Id, eSelecionado.Nome, eSelecionado.ObterNumeroSerie(), eSelecionado.Fabricante, eSelecionado.PrecoAquisicao.ToString("C2"), eSelecionado.DataFabricacao);
+                            eSelecionado.Id, eSelecionado.Nome, eSelecionado.ObterNumeroSerie(), eSelecionado.Fabricante, eSelecionado.PrecoAquisicao.ToString("C2"), eSelecionado.DataFabricacao.ToShortDateString());
                         }
                         break;
 
