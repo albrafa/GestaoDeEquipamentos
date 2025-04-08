@@ -1,4 +1,5 @@
-﻿using System.Threading.Channels;
+﻿using System.ComponentModel.Design;
+using System.Threading.Channels;
 
 namespace GestaoDeEquipamentos.ConsoleApp
 {
@@ -111,7 +112,44 @@ namespace GestaoDeEquipamentos.ConsoleApp
 
         public void ExcluirEquipamento()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("----------------------");
+            Console.WriteLine("Gestão de Equipamentos");
+            Console.WriteLine("----------------------");
+            Console.WriteLine();
+
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("Excluindo equipamentos...");
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine();
+
+            VisualizarEquipamentos(false);
+
+            bool conseguiuExcluir = false;
+
+            Console.Write("Digite o ID do produto que deseja excluir: ");
+            int idSlecionado = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < equipamentos.Length; i++)
+            {
+                if (equipamentos[i] == null) continue;
+
+                else if (equipamentos[i].Id == idSlecionado)
+                {
+                    equipamentos[i] = null;
+                    conseguiuExcluir = true;
+                }
+            }           
+
+            if (!conseguiuExcluir)
+            {
+                Console.WriteLine("Houve um erro durante o processo de exclusão do equipamente selecionado...");
+                return;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("O equipamento foi excluído com sucesso.");
+
         }
 
         public void VisualizarEquipamentos(bool exibirTitulo)
